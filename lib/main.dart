@@ -1,5 +1,8 @@
 import 'package:auto_buying/helper/theme_helper.dart';
+import 'package:auto_buying/screens/welcome/welcome_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+// import 'package:get/get_connect/http/src/utils/utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Auto Buying',
       theme: ThemeData(
         primarySwatch: ThemeHelper.palette1,
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: WelcomeView(),
     );
   }
 }
