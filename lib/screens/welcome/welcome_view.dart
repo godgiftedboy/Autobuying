@@ -1,3 +1,4 @@
+import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,5 +28,31 @@ class WelcomeView extends StatelessWidget {
         ),
       ),
     ));
+  }
+
+  //functions
+  Widget loginBtn() {
+    return CustomElevatedButton(
+      child: Text(
+        "Login",
+        style: TextStyle(fontWeight: FontWeight.w500),
+      ),
+      onPressed: () {},
+    );
+  }
+
+  Widget signUpBtn() {
+    return CustomElevatedButton(
+      child: Text(
+        "Sign Up",
+        style: TextStyle(
+          fontWeight: FontWeight.w500,
+          color: Colors.black,
+        ),
+      ),
+      foreGroundColor: Colors.grey,
+      backGroundColor: Colors.white,
+      onPressed: () {},
+    );
   }
 }
