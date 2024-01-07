@@ -1,3 +1,4 @@
+import 'package:auto_buying/screens/signup/signup_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -45,8 +46,6 @@ class WelcomeView extends StatelessWidget {
         "Login",
         style: TextStyle(fontWeight: FontWeight.w500),
       ),
-      backGroundColor: Colors.blue,
-      foreGroundColor: Colors.white,
       onPressed: () {},
       radius: 15,
     );
@@ -63,7 +62,9 @@ class WelcomeView extends StatelessWidget {
       ),
       foreGroundColor: Colors.grey,
       backGroundColor: Colors.white,
-      onPressed: () {},
+      onPressed: () {
+        Get.to(() => SignupView());
+      },
       radius: 15,
     );
   }

@@ -14,8 +14,8 @@ class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
     Key? key,
     this.onPressed,
-    this.backGroundColor,
-    this.foreGroundColor,
+    this.backGroundColor = Colors.blue,
+    this.foreGroundColor = Colors.white,
     this.height = 48,
     this.width = double.infinity,
     required this.child,
