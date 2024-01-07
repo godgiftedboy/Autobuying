@@ -12,17 +12,17 @@ class ThemeHelper {
   static const navyBlue = Color(0xff1F1F39);
 
   static const MaterialColor palette1 =
-      MaterialColor(_palette1PrimaryValue, <int, Color>{
+      MaterialColor(palette1PrimaryValue, <int, Color>{
     50: Color(0xFFE8ECF9),
     100: Color(0xFFC5CFF0),
     200: Color(0xFF9EAFE6),
     300: Color(0xFF778FDB),
     400: Color(0xFF5A77D4),
-    500: Color(_palette1PrimaryValue),
+    500: Color(palette1PrimaryValue),
     600: Color(0xFF3757C7),
     700: Color(0xFF2F4DC0),
     800: Color(0xFF2743B9),
     900: Color(0xFF1A32AD),
   });
-  static const int _palette1PrimaryValue = 0xFF3D5FCC;
+  static const int palette1PrimaryValue = 0xFF3D5FCC;
 }

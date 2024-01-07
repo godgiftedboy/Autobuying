@@ -20,10 +20,18 @@ class WelcomeView extends StatelessWidget {
         ),
         child: Column(
           children: [
+            Spacer(),
             Image(
               image: AssetImage('assets/images/logo.png'),
               width: Get.width * 0.65,
-            )
+            ),
+            Spacer(),
+            loginBtn(),
+            SizedBox(
+              height: 12,
+            ),
+            signUpBtn(),
+            Spacer(),
           ],
         ),
       ),
@@ -37,7 +45,10 @@ class WelcomeView extends StatelessWidget {
         "Login",
         style: TextStyle(fontWeight: FontWeight.w500),
       ),
+      backGroundColor: Colors.blue,
+      foreGroundColor: Colors.white,
       onPressed: () {},
+      radius: 15,
     );
   }
 
@@ -53,6 +64,7 @@ class WelcomeView extends StatelessWidget {
       foreGroundColor: Colors.grey,
       backGroundColor: Colors.white,
       onPressed: () {},
+      radius: 15,
     );
   }
 }
