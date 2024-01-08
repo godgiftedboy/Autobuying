@@ -1,8 +1,10 @@
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/signup/signup_viewmodel.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
+import 'package:auto_buying/widgets/custom_checkbox_listtile.dart';
 import 'package:auto_buying/widgets/custom_textfields.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
@@ -36,6 +38,9 @@ class SignupView extends StatelessWidget {
                       SizedBox(height: 14),
                       passwordTextField(),
                       createAccountBtn(),
+                      termsAndConditionCheckBox(),
+                      SizedBox(height: 25),
+                      alreadyHaveAccount(),
                     ],
                   ),
                 ),
@@ -117,6 +122,40 @@ class SignupView extends StatelessWidget {
         ),
         onPressed: () {},
         radius: 15,
+      ),
+    );
+  }
+
+  Widget termsAndConditionCheckBox() {
+    return Obx(() => CustomCheckBoxListTile(
+          checkBoxText:
+              "By creating account, You agree \n with our terms and conditions",
+          value: viewModel.termsAndConditions.value,
+          onChanged: (value) {
+            viewModel.termsAndConditions.value = value ?? false;
+          },
+        ));
+  }
+
+  Widget alreadyHaveAccount() {
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(fontSize: 13.5),
+        children: [
+          TextSpan(
+            text: "Already have an account?",
+            style: TextStyle(
+              color: ThemeHelper.grey3,
+            ),
+          ),
+          TextSpan(
+            text: "Login",
+            style: TextStyle(
+              color: ThemeHelper.primaryColor,
+            ),
+            recognizer: TapGestureRecognizer()..onTap = () {},
+          ),
+        ],
       ),
     );
   }
