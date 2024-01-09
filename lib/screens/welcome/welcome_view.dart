@@ -1,3 +1,4 @@
+import 'package:auto_buying/screens/login/login_view.dart';
 import 'package:auto_buying/screens/signup/signup_view.dart';
 import 'package:auto_buying/screens/welcome/welcome_viewmodel.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
@@ -48,7 +49,9 @@ class WelcomeView extends StatelessWidget {
         "Login",
         style: TextStyle(fontWeight: FontWeight.w500),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Get.to(() => LoginView());
+      },
       radius: 15,
     );
   }

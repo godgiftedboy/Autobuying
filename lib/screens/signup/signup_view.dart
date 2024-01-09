@@ -1,4 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
+import 'package:auto_buying/screens/login/login_view.dart';
 import 'package:auto_buying/screens/signup/signup_viewmodel.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:auto_buying/widgets/custom_checkbox_listtile.dart';
@@ -153,7 +154,11 @@ class SignupView extends StatelessWidget {
             style: TextStyle(
               color: ThemeHelper.primaryColor,
             ),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Get.off(() =>
+                    LoginView()); //You can navigate from one page to another, but when you click on the back icon, it will back you 2 steps.
+              },
           ),
         ],
       ),
