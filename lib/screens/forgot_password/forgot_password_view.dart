@@ -1,4 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
+import 'package:auto_buying/screens/otp_verification/otp_verification_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:auto_buying/widgets/custom_textfields.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,9 @@ class ForgotPasswordView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => OtpVerificationView());
+                        },
                       )
                     ],
                   ),
