@@ -33,6 +33,7 @@ class LoginView extends StatelessWidget {
                       emailTextField(),
                       SizedBox(height: 14),
                       passwordTextField(),
+                      forgotPassword(),
                     ],
                   ),
                 ),
@@ -61,16 +62,8 @@ class LoginView extends StatelessWidget {
           ),
           Spacer(),
           Text(
-            "SignUp",
+            "Login",
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 32),
-          ),
-          Text(
-            "Enter Your Details Below and Signup for Free",
-            style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 13,
-              color: ThemeHelper.grey2,
-            ),
           ),
         ],
       ),
@@ -99,6 +92,22 @@ class LoginView extends StatelessWidget {
             size: 20,
           ),
           color: ThemeHelper.navyBlue,
+        ),
+      ),
+    );
+  }
+
+  Widget forgotPassword() {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        alignment: Alignment.centerRight,
+        child: Text(
+          'Forgor password?',
+          style: TextStyle(
+            color: ThemeHelper.grey3,
+            fontSize: 13.5,
+          ),
         ),
       ),
     );
