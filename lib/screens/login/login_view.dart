@@ -1,5 +1,6 @@
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/login/login_viewmodel.dart';
+import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:auto_buying/widgets/custom_textfields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -34,6 +35,7 @@ class LoginView extends StatelessWidget {
                       SizedBox(height: 14),
                       passwordTextField(),
                       forgotPassword(),
+                      loginBtn(),
                     ],
                   ),
                 ),
@@ -109,6 +111,16 @@ class LoginView extends StatelessWidget {
             fontSize: 13.5,
           ),
         ),
+      ),
+    );
+  }
+
+  Widget loginBtn() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20, bottom: 25),
+      child: CustomElevatedButton(
+        child: Text('Login'),
+        onPressed: () {},
       ),
     );
   }
