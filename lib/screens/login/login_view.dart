@@ -1,8 +1,10 @@
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/login/login_viewmodel.dart';
+import 'package:auto_buying/screens/signup/signup_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:auto_buying/widgets/custom_textfields.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,6 +38,8 @@ class LoginView extends StatelessWidget {
                       passwordTextField(),
                       forgotPassword(),
                       loginBtn(),
+                      dontHaveAccount(),
+                      orLoginWith(),
                     ],
                   ),
                 ),
@@ -124,4 +128,72 @@ class LoginView extends StatelessWidget {
       ),
     );
   }
+
+  Widget dontHaveAccount() {
+    return RichText(
+      text: TextSpan(
+        style: TextStyle(fontSize: 13.5),
+        children: [
+          TextSpan(
+            text: "Don\'t have an account?",
+            style: TextStyle(
+              color: ThemeHelper.grey3,
+            ),
+          ),
+          TextSpan(
+            text: "Sign up",
+            style: TextStyle(
+              color: ThemeHelper.primaryColor,
+            ),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                Get.off(() =>
+                    SignupView()); //You can navigate from one page to another, but when you click on the back icon, it will back you 2 steps.
+              },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget orLoginWith() {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 20),
+      child: Row(
+        children: [
+          Expanded(
+            child: Divider(
+              thickness: 0.8,
+              color: ThemeHelper.grey2,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Text(
+              'or Login with',
+              style: TextStyle(
+                color: ThemeHelper.grey3,
+                fontSize: 12,
+              ),
+            ),
+          ),
+          Expanded(
+            child: Divider(
+              thickness: 0.8,
+              color: ThemeHelper.grey2,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget socialImg(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+
+    ],)
+  }
+
 }
