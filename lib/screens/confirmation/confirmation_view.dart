@@ -1,6 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/confirmation/confirmation_viewmodel.dart';
-import 'package:auto_buying/screens/login/login_view.dart';
 import 'package:auto_buying/screens/welcome/welcome_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:flutter/material.dart';
