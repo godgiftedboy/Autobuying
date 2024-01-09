@@ -1,4 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
+import 'package:auto_buying/screens/forgot_password/forgot_password_view.dart';
 import 'package:auto_buying/screens/login/login_viewmodel.dart';
 import 'package:auto_buying/screens/signup/signup_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
@@ -107,7 +108,9 @@ class LoginView extends StatelessWidget {
 
   Widget forgotPassword() {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Get.to(() => ForgotPasswordView());
+      },
       child: Container(
         alignment: Alignment.centerRight,
         child: Text(
