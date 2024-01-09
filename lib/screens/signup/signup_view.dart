@@ -1,4 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
+import 'package:auto_buying/screens/confirmation/confirmation_view.dart';
 import 'package:auto_buying/screens/login/login_view.dart';
 import 'package:auto_buying/screens/signup/signup_viewmodel.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
@@ -121,7 +122,13 @@ class SignupView extends StatelessWidget {
         child: Text(
           'Create Account',
         ),
-        onPressed: () {},
+        onPressed: () {
+          Get.off(() => ConfirmationView(), arguments: {
+            'title': 'Success',
+            'message': 'Conratulations! You have\n successfully registered ',
+            'btnText': 'Continue'
+          });
+        },
         radius: 15,
       ),
     );
