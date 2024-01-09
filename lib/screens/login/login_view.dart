@@ -6,6 +6,7 @@ import 'package:auto_buying/widgets/custom_textfields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class LoginView extends StatelessWidget {
@@ -40,6 +41,7 @@ class LoginView extends StatelessWidget {
                       loginBtn(),
                       dontHaveAccount(),
                       orLoginWith(),
+                      socialImg(),
                     ],
                   ),
                 ),
@@ -188,12 +190,20 @@ class LoginView extends StatelessWidget {
     );
   }
 
-  Widget socialImg(){
+  Widget socialImg() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-
-    ],)
+        SvgPicture.asset(
+          'assets/images/google.svg',
+          width: 50,
+        ),
+        SizedBox(width: 25),
+        SvgPicture.asset(
+          'assets/images/facebook.svg',
+          width: 38,
+        ),
+      ],
+    );
   }
-
 }
