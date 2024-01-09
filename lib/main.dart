@@ -1,10 +1,13 @@
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/welcome/welcome_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 // import 'package:get/get_connect/http/src/utils/utils.dart';
 
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const MyApp());
 }
 

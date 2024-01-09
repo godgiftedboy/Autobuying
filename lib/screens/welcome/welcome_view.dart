@@ -1,10 +1,12 @@
 import 'package:auto_buying/screens/signup/signup_view.dart';
+import 'package:auto_buying/screens/welcome/welcome_viewmodel.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WelcomeView extends StatelessWidget {
-  const WelcomeView({super.key});
+  WelcomeView({super.key});
+  final WelcomeViewModel viewModel = Get.put(WelcomeViewModel());
 
   @override
   Widget build(BuildContext context) {
