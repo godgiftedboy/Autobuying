@@ -1,4 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
+import 'package:auto_buying/screens/create_new_password/create_new_password_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,9 @@ class OtpVerificationView extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => CreateNewPasswordView());
+                        },
                       ),
                       SizedBox(height: 30),
                       RichText(

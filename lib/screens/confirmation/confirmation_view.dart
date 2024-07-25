@@ -1,6 +1,5 @@
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/confirmation/confirmation_viewmodel.dart';
-import 'package:auto_buying/screens/welcome/welcome_view.dart';
 import 'package:auto_buying/widgets/custom_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -55,7 +54,7 @@ class ConfirmationView extends StatelessWidget {
       child: CustomElevatedButton(
         child: Text(viewModel.btnText),
         onPressed: () {
-          Get.off(() => WelcomeView());
+          // Get.to(() => WelcomeView()); //it doesnot refreshes the arguments there so we cannot use this navigation
         },
       ),
     );

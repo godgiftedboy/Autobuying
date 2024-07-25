@@ -19,7 +19,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.height = 48,
     this.width = double.infinity,
     required this.child,
-    this.radius = 0,
+    this.radius = 11,
     this.side,
   }) : super(key: key);
 
