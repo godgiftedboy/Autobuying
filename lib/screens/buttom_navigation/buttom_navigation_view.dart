@@ -1,7 +1,6 @@
 import 'package:auto_buying/helper/global_variable.dart';
 import 'package:auto_buying/helper/theme_helper.dart';
 import 'package:auto_buying/screens/buttom_navigation/buttom_navigation_viewmodel.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
